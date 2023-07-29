@@ -1,0 +1,133 @@
+.footer {
+    &__top {
+        padding-top: 112px;
+        padding-bottom: 137px;
+        background-color: #001414;
+
+        .container {
+            @include small-tablet {
+                gap: var(--offset);
+            }
+        }
+    }
+    &__logo {
+        @include small-tablet {
+            margin-bottom: 20px;
+        }
+    }
+    &__bottom {
+        padding-top: 40px;
+        padding-bottom: 63px;
+        background-color: #000f0f;
+
+        &-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @include small-tablet {
+                flex-direction: column;
+            }
+        }
+        &-text {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__column {
+        grid-column: 2 span;
+
+        &:last-child {
+            grid-column: 11 / 2 span;
+
+            @include small-tablet {
+                grid-column: 2 span;
+            }
+        }
+    }
+    &__title {
+        margin: 0;
+        margin-bottom: 23px;
+        padding-bottom: 24px;
+        color: #7D9798;
+        font-size: 11px;
+        line-height: 16px;
+        text-transform: uppercase;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 16px;
+            height: 1px;
+            background-color: #25b895;
+        }
+    }
+    &__link {
+        color: #EDECEB;
+        font-size: 15px;
+        line-height: 30px;
+
+        transition: color .3s ease-in-out;
+    &:focus {
+        outline: none;
+    }
+    @include hover {
+        color: var(--accent-color);
+    }
+    &:active {
+        color: var(--active-color);
+    }
+
+    }
+
+    &__sublist {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 8px;
+
+        @include small-tablet{
+            margin-bottom: 20px;
+            flex-direction: column;
+        }
+        &-link {
+            color: #e5ecec;
+            font-size: 10px;
+            font-family: Public Sans;
+            line-height: 10px;
+            transition: color .3s ease-in-out;
+            &:focus {
+                outline: none;
+            }
+            @include hover {
+                color: var(--accent-color);
+            }
+            &:active {
+                color: var(--active-color);
+            }
+            @include small-tablet {
+                font-size: 14px;
+            }
+        }
+
+       
+    }
+    &__copy {
+        color: #E5ECEC;
+        font-size: 9px;
+        line-height: 10px;
+    }
+    &__rights {
+        color: #E5ECEC;
+        font-size: 10px;
+        line-height: 10px;
+    }
+}
+
+.footer__link.focus-visible {
+    outline: 1px solid var(--active-color);
+}

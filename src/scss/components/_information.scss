@@ -1,0 +1,57 @@
+.information {
+    position: relative;
+    padding-bottom: 140px;
+    background-color: #f4f4f5;
+    &__text {
+        grid-column: 6 span;
+
+        @include small-tablet {
+            grid-column: 4 span;
+          }
+    }
+    &__title {
+        margin: 0;
+        max-width: 80%;
+        color: #003331;
+        font-size: 31px;
+        font-family: 'LibreBaskerville';
+        line-height: 38px;
+        letter-spacing: 1.2px;
+
+        @include small-tablet {
+            margin-bottom: 20px;
+          }
+    }
+    &__list {
+        grid-column: 7 / 6 span;
+
+        display: grid;
+        column-gap: var(--offset);
+        row-gap: 36px;
+        grid-template-columns: repeat(6, 1fr);
+
+        @include small-tablet {
+            grid-column: 4 span;
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+    &__item {
+        grid-column: 3 span;
+
+        @include small-tablet {
+            grid-column: 4 span;
+        }
+    }
+    &__subtitle {
+        margin: 0;
+        margin-bottom: 4px;
+        color: #003331;
+        font-size: 15px;
+        line-height: 24px;
+    }
+    &__desc {
+        color: rgba(53, 83, 98, 0.80);
+        font-size: 15px;
+        line-height: 24px;
+    }
+}

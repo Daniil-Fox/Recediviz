@@ -1,0 +1,48 @@
+.where {
+    padding-top: 155px;
+    padding-bottom: 133px;
+    background-color: #001F1F;
+    // min-height: 630px;
+    color: var(--light-color);
+
+
+    &__content {
+        grid-column: 4 span;
+        @include small-tablet {
+            margin-bottom: 20px;
+        }
+    }
+    &__map {
+        grid-column: 7 / 5 span;
+
+        @include small-tablet {
+            grid-column: 4 span;
+        }
+    }
+    &__title {
+        margin: 0;
+        margin-bottom: 43px;
+        color: #fafafa;
+        font-size: 36px;
+        font-family: 'LibreBaskerville';
+        line-height: 52px;
+        letter-spacing: 1.2px;
+    }
+    &__desc {
+        margin: 0;  
+        margin-bottom: 37px;
+        font-size: 18px;
+        line-height: 28px;
+        color: #fafafa;
+    }
+    &__btn {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.02px;
+        color: inherit;
+
+        padding: 16px 32px;
+        border: none;
+        background-color: #00665F;
+    }
+}
